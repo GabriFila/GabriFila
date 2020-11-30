@@ -15,7 +15,8 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-🎓 - I'm student Computer Engineering at [Polito](https://www.polito.it/) .
+🎓 - I'm student Computer Engineering at [Polito](https://www.polito.it/)
+
 🌐❤️☁️ - I love web apps and cloud computing
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GabriFila&hide=c%2B%2B&exclude_repo=PoliDOTS&bg_color=35,0f234a,2e54ab&title_color=fff&text_color=fff&custom_title=I%20code%20in...)](https://github.com/anuraghazra/github-readme-stats)
