@@ -14,7 +14,7 @@ Some interesting projects I worked on lately:
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=GabriFila&repo=app-sagra-pesto&bg_color=35,0f234a,2e54ab&title_color=fff&text_color=fff" />
 </a>
 
-<a href="https://github.com/netgroup-polito/CorwnLabs">
+<a href="https://github.com/netgroup-polito/CrownLabs">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=netgroup-polito&repo=CrownLabs&bg_color=35,0f234a,2e54ab&title_color=fff&text_color=fff&show_owner=true" />
 </a>
 
