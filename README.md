@@ -1,38 +1,27 @@
-# create-svelte
+### Hi there 👋
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+🎓 - I'm student Computer Engineering at [Polito](https://www.polito.it/)
 
-## Creating a project
+🌐❤️☁️ - I love web apps and cloud computing
 
-If you're seeing this, you've probably already done this step. Congrats!
+Some interesting projects I'm working on:
 
-```bash
-# create a new project in the current directory
-npm init svelte
+<a href="https://github.com/netgroup-polito/CrownLabs" style="margin: 5px">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=netgroup-polito&repo=CrownLabs&bg_color=35,0f234a,2e54ab&title_color=fff&text_color=fff&show_owner=true" />
+</a>
+<br/>
+<br/>
+<a href="https://github.com/GabriFila/app-sagra-pesto" style="margin: 5px">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=GabriFila&repo=app-sagra-pesto&bg_color=35,0f234a,2e54ab&title_color=fff&text_color=fff" />
+</a>
 
-# create a new project in my-app
-npm init svelte my-app
-```
+<br/>
+<br/>
 
-## Developing
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=GabriFila&hide=c%2B%2B&exclude_repo=PoliDOTS&bg_color=35,0f234a,2e54ab&title_color=fff&text_color=fff&custom_title=I%20code%20in...)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+![GabriFila's github stats](https://github-readme-stats.vercel.app/api?username=GabriFila&bg_color=35,0f234a,2e54ab&title_color=fff&text_color=fff&show_icons=true&custom_title=My%20stats)
 
-```bash
-npm run dev
+<br/>
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+_Cool graphics took by [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)_
