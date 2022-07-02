@@ -53,7 +53,7 @@
 				class="fa-solid fa-bars sm:hidden text-primary text-3xl mt-4"
 			/>
 		</div>
-		<nav class="sm:flex justify-end gap-6 hidden sm:visible">
+		<nav class="sm:flex justify-end gap-6 hidden sm:visible ">
 			{#each NAV_LINKS as { text, href }}
 				<NavLink {href} {text} />
 			{/each}
@@ -62,12 +62,20 @@
 	<div class="flex-1">
 		<slot />
 	</div>
-	<div class="flex justify-end gap-3">
-		{#each ICONS_CLASSES as { classes, href }}
-			<a {href} target="_blank">
-				<i class={`${classes} text-3xl text-secondary`} />
+	<div class="flex justify-between ">
+		<p class="text-primary text-xl">
+			Built with
+			<a href="https://kit.svelte.dev/" target="_blank" class="border-b-primary border-b-2">
+				SvelteKit
 			</a>
-		{/each}
+		</p>
+		<div class="flex gap-3 ">
+			{#each ICONS_CLASSES as { classes, href }}
+				<a {href} target="_blank">
+					<i class={`${classes} text-3xl text-secondary grow-on-hover`} />
+				</a>
+			{/each}
+		</div>
 	</div>
 </div>
 
@@ -79,7 +87,7 @@
 	}
 
 	h1 {
-		background: -webkit-linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+		background: -webkit-linear-gradient(0deg, var(--primary-color), var(--secondary-color));
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}

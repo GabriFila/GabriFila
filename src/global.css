@@ -14,3 +14,7 @@ body,
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.grow-on-hover {
+	@apply transition-transform hover:scale-110 duration-200;
+}
