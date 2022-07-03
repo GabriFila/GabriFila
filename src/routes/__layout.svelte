@@ -92,7 +92,9 @@
 		<div class="flex justify-between flex-1 w-full items-center">
 			<a href="/">
 				<h1 class="capitalize font-bold text-3xl sm:text-5xl">Gabriele Filaferro</h1>
-				<h2 class="capitalize text-lg sm:text-2xl text-text ">Full Stack Software Engineer</h2>
+				<h2 class="capitalize text-lg sm:text-2xl text-text sm:mt-1">
+					Full Stack Software Engineer
+				</h2>
 			</a>
 			<i on:click={toggleMobileMenu} class="fa-solid fa-bars sm:hidden text-secondary text-3xl" />
 		</div>
