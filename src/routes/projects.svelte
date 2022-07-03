@@ -1,37 +1,64 @@
 <script lang="ts">
 	import ShowcaseSection from '../components/ShowcaseSection.svelte';
 	import MagnetSection from '../components/MagnetSection.svelte';
+	import RecapSection from '../components/RecapSection.svelte';
 	import { onMount } from 'svelte';
 	import { updateTotalPages } from '../stores/pageCursor';
+	import type { RecapItem } from '../types';
 
 	const GENVISION_ID = 'genvision';
 	const NEWSWORTHY_ID = 'newsworthy';
+	const CROWNLABS_ID = 'crownlabs';
+	const LIQO_ID = 'liqo';
+	const CIRULLINO_ID = 'cirullino';
+	const CNGEI_ID = 'cngei';
+
+	const PROJECTS: RecapItem[] = [
+		{
+			title: 'Active Projects',
+			subItems: [
+				{
+					name: 'Genvision',
+					id: GENVISION_ID
+				},
+				{
+					name: 'Newsworthy',
+					id: NEWSWORTHY_ID
+				}
+			]
+		},
+		{
+			title: 'Open source Projects',
+			subItems: [
+				{
+					name: 'Crownlabs',
+					id: CROWNLABS_ID
+				},
+				{
+					name: 'Liqo',
+					id: LIQO_ID
+				}
+			]
+		},
+		{
+			title: 'Other Projects',
+			subItems: [
+				{
+					name: 'Cirullino Bot',
+					id: CIRULLINO_ID
+				},
+				{
+					name: 'Sagra del Pesto',
+					id: CNGEI_ID
+				}
+			]
+		}
+	];
 
 	onMount(updateTotalPages);
 </script>
 
-<MagnetSection>
-	<div class="flex flex-1 flex-col justify-center gap-32">
-		<div class="flex flex-col justify-center">
-			<h2 class="text-center text-4xl uppercase text-primary mb-2"><b>Active Projects</b></h2>
-			<div class="flex justify-center gap-20">
-				<a href={`#${GENVISION_ID}`}>
-					<h3 class="text-center text-3xl">Genvision</h3>
-				</a>
-				<a href={`#${NEWSWORTHY_ID}`}>
-					<h3 class="text-center text-3xl">Newsworthy</h3>
-				</a>
-			</div>
-		</div>
-		<div class="flex flex-col justify-center">
-			<h2 class="text-center text-4xl uppercase text-primary mb-2"><b>Other Projects</b></h2>
-			<div class="flex justify-center gap-20">
-				<h3 class="text-center text-3xl">Cirullino Bot</h3>
-				<h3 class="text-center text-3xl">Sagra del Pesto</h3>
-			</div>
-		</div>
-	</div>
-</MagnetSection>
+<RecapSection items={PROJECTS} />
 <ShowcaseSection
 	id={GENVISION_ID}
 	title="Genvision"
@@ -56,7 +83,29 @@
 	</div>
 </ShowcaseSection>
 <ShowcaseSection
-	id={NEWSWORTHY_ID}
+	id={LIQO_ID}
+	title="Liqo"
+	text={'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti provident, qui officiis dolorem vitae libero dicta delectus reiciendis ipsa quas.'}
+>
+	<div class="sm:flex-1 uppercase text-center font-gv text-5xl leading-tight flex justify-center">
+		<a href="https://liqo.io/" target="_blank">
+			<img src="/liqo.svg" alt="Liqo logo" class="max-w-[300px] w-full" />
+		</a>
+	</div>
+</ShowcaseSection>
+<ShowcaseSection
+	id={CROWNLABS_ID}
+	title="Sagra del Pesto"
+	text={'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti provident, qui officiis dolorem vitae libero dicta delectus reiciendis ipsa quas.'}
+>
+	<div class="sm:flex-1 uppercase text-center font-gv text-5xl leading-tight flex justify-center">
+		<a href="https://crownlabs.polito.it/#" target="_blank">
+			<img src="/crownlabs.svg" alt="Crownlabs logo" class="max-w-[250px] w-full" />
+		</a>
+	</div>
+</ShowcaseSection>
+<ShowcaseSection
+	id={CIRULLINO_ID}
 	title="Cirullino Bot"
 	text={'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti provident, qui officiis dolorem vitae libero dicta delectus reiciendis ipsa quas.'}
 >
@@ -71,7 +120,7 @@
 	</div>
 </ShowcaseSection>
 <ShowcaseSection
-	id={NEWSWORTHY_ID}
+	id={CNGEI_ID}
 	title="Sagra del Pesto"
 	text={'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti provident, qui officiis dolorem vitae libero dicta delectus reiciendis ipsa quas.'}
 >

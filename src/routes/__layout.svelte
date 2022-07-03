@@ -36,8 +36,8 @@
 	const HSL_REGEX = /(\d{0,3}),\s(\d{0,2})%,\s(\d{0,2})%/;
 	onMount(() => {
 		setInterval(() => {
-			// increaseHueCssVar('--primary-color-values');
-			// increaseHueCssVar('--secondary-color-values');
+			increaseHueCssVar('--primary-color-values');
+			increaseHueCssVar('--secondary-color-values');
 		}, 700);
 
 		function increaseHueCssVar(prop: string) {
@@ -74,11 +74,12 @@
 		/>
 		<nav class="flex justify-center gap-20 flex-col items-center h-full">
 			{#each NAV_LINKS as { text, href }, i}
-				<NavLink {href} {text} delayFactor={i + 1} />
+				<NavLink {href} {text} delayFactor={i + 1} on:click={toggleMobileMenu} />
 			{/each}
 		</nav>
 	</div>
 {/if}
+<!-- <div class="relative h-full scroll-smooth"> -->
 <div class="relative h-full snap-y snap-mandatory snap-always overflow-y-auto scroll-smooth">
 	<slot />
 </div>
@@ -106,8 +107,9 @@
 			<div class="flex flex-col justify-between gap-3 items-center">
 				{#each Array($totalPages) as page, i}
 					<div
-						transition:fade={{ delay: i * 200 }}
-						class={`bg-secondary cursor-pointer pointer-events-auto grow-on-hover transition-all duration-300 ${
+						in:fade={{ delay: i * 200 }}
+						out:fade
+						class={`bg-secondary rounded-sm cursor-pointer pointer-events-auto grow-on-hover transition-all duration-300 ${
 							$pageIdx === i ? 'w-4 h-4' : 'w-2 h-2 m-2'
 						}`}
 						on:click={() => {
