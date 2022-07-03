@@ -5,6 +5,13 @@
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
+/* this file exists only to use self-hosted font */
+@font-face {
+	font-family: 'Gen Vision Font';
+	src: url('/customFont.woff') format('woff');
+	src: url('/customFont.ttf') format('truetype');
+}
+
 html,
 body,
 #app {
@@ -17,4 +24,8 @@ body,
 
 .grow-on-hover {
 	@apply transition-transform hover:scale-110 duration-200;
+}
+
+.page-card {
+	@apply snap-start w-full h-full py-28 px-8 sm:px-10 sm:py-32 flex flex-col;
 }
