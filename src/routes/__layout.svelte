@@ -36,8 +36,8 @@
 	const HSL_REGEX = /(\d{0,3}),\s(\d{0,2})%,\s(\d{0,2})%/;
 	onMount(() => {
 		setInterval(() => {
-			increaseHueCssVar('--primary-color-values');
-			increaseHueCssVar('--secondary-color-values');
+			// increaseHueCssVar('--primary-color-values');
+			// increaseHueCssVar('--secondary-color-values');
 		}, 700);
 
 		function increaseHueCssVar(prop: string) {
@@ -102,7 +102,7 @@
 		</nav>
 	</div>
 	{#if $totalPages > 1}
-		<div class="w-full flex justify-end">
+		<div class="hidden w-full sm:flex justify-end">
 			<div class="flex flex-col justify-between gap-3 items-center">
 				{#each Array($totalPages) as page, i}
 					<div
@@ -138,8 +138,8 @@
 <style>
 	:root {
 		--bg-grad: linear-gradient(112.86deg, #1c1c1c 0.59%, #262626 99.62%);
-		--primary-color-values: 20, 96%, 69%;
-		--secondary-color-values: 240, 96%, 69%;
+		--primary-color-values: 350, 96%, 69%;
+		--secondary-color-values: 179, 96%, 69%;
 		--primary-color: hsl(var(--primary-color-values));
 		--secondary-color: hsl(var(--secondary-color-values));
 	}
