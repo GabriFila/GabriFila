@@ -2,11 +2,10 @@
 	import MagnetSection from './MagnetSection.svelte';
 	export let id: string;
 	export let text: string;
-	export let pageIdx: number;
 	export let title: string;
 </script>
 
-<MagnetSection {pageIdx}>
+<MagnetSection>
 	<div
 		{id}
 		class="flex flex-col text-center sm:text-left sm:flex-row justify-center items-center h-full sm:px-16 text-xl gap-12"

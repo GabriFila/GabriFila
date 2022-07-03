@@ -2,15 +2,24 @@
 	import { setPageIdx } from '../stores/pageCursor';
 
 	import { inview } from 'svelte-inview';
-	export let pageIdx: number;
+	import { onMount } from 'svelte';
+	import { getId } from '../stores/ids';
+
+	const id = getId();
+	let idx: undefined | number = undefined;
+
+	onMount(() => {
+		idx = Array.from(document.querySelectorAll('.page-card')).findIndex((el) => el.id === id);
+	});
 </script>
 
 <div
+	{id}
 	class="page-card"
 	use:inview={{ threshold: 0.25 }}
 	on:enter={(ev) => {
 		const {} = ev;
-		setPageIdx(pageIdx);
+		setPageIdx(idx || 0);
 	}}
 >
 	<slot />

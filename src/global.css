@@ -26,7 +26,7 @@ html {
 @tailwind utilities;
 
 .grow-on-hover {
-	@apply transition-transform hover:scale-110 duration-200;
+	@apply transition-all hover:scale-110 duration-200;
 }
 
 .page-card {

@@ -1,9 +1,10 @@
 <script lang="ts">
 	import '../global.css';
 	import NavLink from '../components/NavLink.svelte';
-	import { fly } from 'svelte/transition';
+	import { fly, fade } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { cubicOut } from 'svelte/easing';
+	import { pageIdx, totalPages } from '../stores/pageCursor';
 
 	const NAV_LINKS: { href: string; text: string }[] = [
 		{ text: 'projects', href: '/projects' },
@@ -100,11 +101,28 @@
 			{/each}
 		</nav>
 	</div>
+	{#if $totalPages > 1}
+		<div class="w-full flex justify-end">
+			<div class="flex flex-col justify-between gap-3 items-center">
+				{#each Array($totalPages) as page, i}
+					<div
+						transition:fade={{ delay: i * 200 }}
+						class={`bg-secondary cursor-pointer pointer-events-auto grow-on-hover transition-all duration-300 ${
+							$pageIdx === i ? 'w-4 h-4' : 'w-2 h-2 m-2'
+						}`}
+						on:click={() => {
+							document.querySelectorAll('.page-card')[i].scrollIntoView();
+						}}
+					/>
+				{/each}
+			</div>
+		</div>
+	{/if}
 	<div class="flex justify-between items-end pointer-events-auto">
-		<p class="text-primary text-lg sm:text-xl">
-			Built with
-			<a href="https://kit.svelte.dev/" target="_blank" class="border-b-primary border-b-2">
-				SvelteKit
+		<p class="text-primary text-lg sm:text-xl ">
+			Built with SvelteKit
+			<a href="https://github.com/GabriFila/GabriFila" target="_blank" class="ml-1">
+				<i class="fa-solid fa-up-right-from-square text-primary text-xl " />
 			</a>
 		</p>
 		<div class="flex gap-3 ">
