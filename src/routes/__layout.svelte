@@ -4,6 +4,7 @@
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { cubicOut } from 'svelte/easing';
+
 	const NAV_LINKS: { href: string; text: string }[] = [
 		{ text: 'projects', href: '/projects' },
 		{ text: 'tech stack', href: '/tech-stack' },
@@ -34,9 +35,9 @@
 	const HSL_REGEX = /(\d{0,3}),\s(\d{0,2})%,\s(\d{0,2})%/;
 	onMount(() => {
 		setInterval(() => {
-			// increaseHueCssVar('--primary-color-values');
-			// increaseHueCssVar('--secondary-color-values');
-		}, 500);
+			increaseHueCssVar('--primary-color-values');
+			increaseHueCssVar('--secondary-color-values');
+		}, 700);
 
 		function increaseHueCssVar(prop: string) {
 			const value = getCssVariable(prop);
@@ -77,11 +78,15 @@
 		</nav>
 	</div>
 {/if}
-<div class="relative h-full snap-y snap-mandatory snap-always overflow-y-auto">
+<div class="relative h-full snap-y snap-mandatory snap-always overflow-y-auto scroll-smooth">
 	<slot />
 </div>
-<div class="fixed w-full h-full p-4 sm:p-10 flex flex-col top-0 left-0 justify-between">
-	<div class="flex flex-col sm:flex-row justify-between sm:items-start items-center mb-6">
+<div
+	class="fixed w-full h-full p-4 sm:p-10 flex flex-col top-0 left-0 justify-between pointer-events-none"
+>
+	<div
+		class="flex flex-col sm:flex-row justify-between sm:items-start items-center mb-6 pointer-events-auto"
+	>
 		<div class="flex justify-between flex-1 w-full items-center">
 			<a href="/">
 				<h1 class="capitalize font-bold text-3xl sm:text-5xl">Gabriele Filaferro</h1>
@@ -95,7 +100,7 @@
 			{/each}
 		</nav>
 	</div>
-	<div class="flex justify-between items-end">
+	<div class="flex justify-between items-end pointer-events-auto">
 		<p class="text-primary text-lg sm:text-xl">
 			Built with
 			<a href="https://kit.svelte.dev/" target="_blank" class="border-b-primary border-b-2">

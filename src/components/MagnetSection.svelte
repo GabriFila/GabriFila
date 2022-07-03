@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { inview } from 'svelte-inview';
+	import { setPageIdx } from '../stores/pageCursor';
 
-	let isInView: boolean;
-	const options = {};
+	import { inview } from 'svelte-inview';
+	export let pageIdx: number;
 </script>
 
 <div
-	class="page-card bg-primary"
-	on:enter={(event) => {
-		const { inView, entry, scrollDirection, observer, node } = event.detail;
-		isInView = inView;
-		console.log('in viwew');
+	class="page-card"
+	use:inview={{ threshold: 0.25 }}
+	on:enter={(ev) => {
+		const {} = ev;
+		setPageIdx(pageIdx);
 	}}
 >
 	<slot />

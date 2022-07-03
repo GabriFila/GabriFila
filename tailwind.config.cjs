@@ -3,7 +3,8 @@ module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		fontFamily: {
-			gv: ['"Gen Vision Font"', 'sans-serif']
+			base: ["'Roboto Condensed'", 'sans-serif'],
+			gv: ["'Gen Vision Font'", 'sans-serif']
 		},
 		colors: {
 			bgStart: '#1C1C1C',
