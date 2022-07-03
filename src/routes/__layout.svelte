@@ -141,7 +141,7 @@
 
 <style>
 	:root {
-		--bg-grad: linear-gradient(112.86deg, #1c1c1c 0.59%, #262626 99.62%);
+		--bg-grad: linear-gradient(112.86deg, #131313 0.59%, #202020 99.62%);
 		--primary-color-values: 350, 96%, 69%;
 		--secondary-color-values: 179, 96%, 69%;
 		--primary-color: hsl(var(--primary-color-values));
