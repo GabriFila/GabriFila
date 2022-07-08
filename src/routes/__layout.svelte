@@ -63,7 +63,8 @@
 
 {#if isMenuOpen}
 	<div
-		transition:fly={{ x: 400 }}
+		in:fly={{ x: 400 }}
+		out:fade={{ duration: 500 }}
 		class="fixed z-40 w-full h-full sm:hidden"
 		style="background: var(--bg-grad); relative"
 	>

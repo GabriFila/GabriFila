@@ -6,7 +6,7 @@
 	export let delayFactor: number = 0;
 </script>
 
-<div transition:fade={{ delay: 250 * delayFactor }} class="grow-on-hover" on:click>
+<div transition:fade={{ delay: 150 * delayFactor }} class="grow-on-hover" on:click>
 	<a {href} class="text-secondary uppercase text-2xl"> {text} </a>
 	{#if $page.url.pathname == href}
 		<div transition:fade={{ duration: 400 }} class="bg-secondary w-10/12 h-[2px] mx-auto" />

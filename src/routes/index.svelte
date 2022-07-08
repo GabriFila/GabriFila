@@ -12,7 +12,7 @@
 		>
 			<div class="sm:flex-1 flex justify-center items-center sm:items-start">
 				<div class="max-w-[20vh] max-h-[20vh] sm:max-h-fit sm:max-w-sm">
-					<img class="rounded-[50%] h-full w-full" src="/head.webp" alt="Gabri's profile pic" />
+					<img class="rounded-[50%] h-full w-full" src="/me.webp" alt="Gabri's profile pic" />
 				</div>
 			</div>
 			<p class="text-center sm:text-left text-text  text-xl sm:flex-1 max-w-3xl ">
