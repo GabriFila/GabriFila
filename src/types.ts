@@ -1,1 +1,5 @@
-export type RecapItem = { title: string; id?: string; subItems: { name: string; id?: string }[] };
+export type RecapItem = {
+	title: string;
+	id?: string;
+	imgSrc?: string;
+};

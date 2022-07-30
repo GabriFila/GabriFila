@@ -7,7 +7,7 @@
 
 	const id = getId();
 	let idx: undefined | number = undefined;
-
+	export let cssClass: string = '';
 	onMount(() => {
 		idx = Array.from(document.querySelectorAll('.page-card')).findIndex((el) => el.id === id);
 	});
@@ -15,7 +15,7 @@
 
 <div
 	{id}
-	class="page-card"
+	class={`page-card ${cssClass}`}
 	use:inview={{ threshold: 0.25 }}
 	on:enter={(ev) => {
 		const {} = ev;

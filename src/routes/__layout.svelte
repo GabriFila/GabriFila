@@ -7,11 +7,12 @@
 	import { pageIdx, totalPages } from '../stores/pageCursor';
 
 	const NAV_LINKS: { href: string; text: string }[] = [
-		{ text: 'projects', href: '/projects' },
+		// { text: 'projects', href: '/projects' },
 		{ text: 'tech stack', href: '/tech-stack' },
 		{ text: 'resume', href: '/resume' }
 	];
 	const ICONS_CLASSES: { href: string; classes: string }[] = [
+		{ classes: 'fa-solid fa-envelope', href: 'mailto:gabriele.filaferro@gmail.com' },
 		{ classes: 'fa-brands fa-instagram-square', href: 'https://www.instagram.com/gabri.fila/' },
 		{ classes: 'fa-brands fa-linkedin', href: 'https://www.linkedin.com/in/gabriele-filaferro/' },
 		{ classes: 'fa-brands fa-github', href: 'https://github.com/GabriFila' }
@@ -124,16 +125,16 @@
 		</div>
 	{/if}
 	<div class="flex justify-between items-end pointer-events-auto">
-		<p class="text-primary text-lg sm:text-xl ">
-			Built with SvelteKit
-			<a href="https://github.com/GabriFila/GabriFila" target="_blank" class="ml-1">
-				<i class="fa-solid fa-up-right-from-square text-primary text-xl " />
+		<p class="text-text text-xs sm:text-xl ">
+			<a href="https://github.com/GabriFila/GabriFila" target="_blank">
+				Built with SvelteKit
+				<i class="fa-solid fa-up-right-from-square text-text text-base ml-1" />
 			</a>
 		</p>
 		<div class="flex gap-3 ">
 			{#each ICONS_CLASSES as { classes, href }}
 				<a {href} target="_blank">
-					<i class={`${classes} text-2xl sm:text-3xl text-secondary grow-on-hover`} />
+					<i class={`${classes} text-2xl sm:text-3xl text-text grow-on-hover`} />
 				</a>
 			{/each}
 		</div>

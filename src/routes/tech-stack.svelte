@@ -10,7 +10,7 @@
 	items={[
 		{
 			title: 'frontend',
-			subItems: []
+			subItems: ['React', 'Svelte', 'HUGO', 'JAM Stack']
 		},
 		{
 			title: 'backend',

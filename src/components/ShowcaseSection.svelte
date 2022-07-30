@@ -8,7 +8,7 @@
 <MagnetSection>
 	<div
 		{id}
-		class="flex flex-col text-center sm:text-left sm:flex-row justify-center items-center h-full sm:px-16 text-xl gap-12"
+		class="flex flex-col text-center sm:text-left sm:flex-row justify-center items-center h-full sm:px-16 text-lg sm:text-xl gap-12"
 	>
 		<div class="sm:flex-1">
 			<h2 class="text-primary uppercase text-3xl"><b>{title}</b></h2>

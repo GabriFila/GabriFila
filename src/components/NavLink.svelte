@@ -4,10 +4,21 @@
 	export let href: string;
 	export let text: string;
 	export let delayFactor: number = 0;
+
+	let isActive = false;
+
+	$: {
+		isActive = href === $page.url.pathname;
+	}
 </script>
 
 <div transition:fade={{ delay: 150 * delayFactor }} class="grow-on-hover" on:click>
-	<a {href} class="text-secondary uppercase text-2xl"> {text} </a>
+	<a
+		{href}
+		class={` ${isActive ? 'text-secondary' : 'text-text'} transition-colors uppercase text-2xl`}
+	>
+		{text}
+	</a>
 	{#if $page.url.pathname == href}
 		<div transition:fade={{ duration: 400 }} class="bg-secondary w-10/12 h-[2px] mx-auto" />
 	{/if}
