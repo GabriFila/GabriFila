@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	import { updateTotalPages } from '../stores/pageCursor';
 	import type { RecapItem } from '../types';
-	import ConditionalATagWrapper from './ConditionalATagWrapper.svelte';
+	import Card from './Card.svelte';
 
 	export let items: RecapItem[] = [];
 	export let id: string | undefined = undefined;
@@ -14,24 +14,27 @@
 <MagnetSection>
 	<div
 		{id}
-		class="grid grid-cols-1 sm:grid-cols-3 flex-1 sm:p-3 sm:px-12 justify-between gap-2 sm:gap-4 "
+		class="grid grid-cols-1 md:grid-cols-3 flex-1 md:py-12 md:px-12 justify-between gap-1 md:gap-6"
 	>
-		{#each items as { id: subItemId, title, imgSrc }}
+		{#each items as { id: subItemId, title, imgSrc, tags }}
 			<a href={`#${subItemId}`}>
-				<div class="h-full bg-[#333333] flex items-center gap-4 sm:py-1 px-3 rounded-md">
-					{#if imgSrc}
-						<img src={imgSrc} class="w-10 h-w-10 sm:w-24 sm:h-24" alt={title} />
-					{/if}
-					<div class="flex flex-col sm:gap-1">
-						{#if title}
-							<h3 class="text-xl sm:text-2xl">{title}</h3>
+				<Card>
+					<div class="flex items-center p-1 sm:p-5 gap-4">
+						{#if imgSrc}
+							<img src={imgSrc} class="w-10 h-w-10 sm:w-16 sm:h-16 xl:w-24 xl:h-24" alt={title} />
 						{/if}
-						<div class="flex gap-2">
-							<div class="text-primary text-sm rounded-md p-1">#OpenSource</div>
-							<div class="text-primary text-sm rounded-md p-1">#WIP</div>
+						<div class="flex flex-col sm:gap-1">
+							{#if title}
+								<h3 class="text-xl sm:text-2xl">{title}</h3>
+							{/if}
+							<div class="flex gap-1">
+								{#each tags ?? [] as tag}
+									<div class="text-primary text-base rounded-md p-1">#{tag}</div>
+								{/each}
+							</div>
 						</div>
 					</div>
-				</div>
+				</Card>
 			</a>
 		{/each}
 	</div>

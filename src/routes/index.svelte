@@ -27,37 +27,58 @@
 		[CNGEI_ID]: 'https://cngei.it/wp-content/themes/cngei/images/logo.svg'
 	};
 
+	const PROJECT_LINKS: { [projectId: string]: string } = {
+		[GENVISION_ID]: 'https://gvnetwork.it/genvision',
+		[MLAT_ID]: 'https://milegoalterritorio.it',
+		[NEWSWORTHY_ID]: 'https://news-worthy.netlify.app',
+		[CROWNLABS_ID]: 'https://crownlabs.polito.it/',
+		[LIQO_ID]: 'https://liqo.io/',
+		[CIRULLINO_ID]: 'https://github.com/GabriFila/cirullino_js',
+		[CNGEI_ID]: 'https://github.com/GabriFila/app-sagra-pesto'
+	};
+
 	const PROJECTS: RecapItem[] = [
 		{
 			title: 'Genvision',
 			id: GENVISION_ID,
-			imgSrc: PROJECT_IMAGES[GENVISION_ID]
+			imgSrc: PROJECT_IMAGES[GENVISION_ID],
+			tags: ['usedInProduction']
 		},
 		{
 			title: 'Mi Lego Al Territorio',
 			id: MLAT_ID,
-			imgSrc: PROJECT_IMAGES[MLAT_ID]
+			imgSrc: PROJECT_IMAGES[MLAT_ID],
+			tags: ['usedInProduction']
 		},
-		{ title: 'Newsworthy', id: NEWSWORTHY_ID, imgSrc: PROJECT_IMAGES[NEWSWORTHY_ID] },
+		{
+			title: 'Newsworthy',
+			id: NEWSWORTHY_ID,
+			imgSrc: PROJECT_IMAGES[NEWSWORTHY_ID],
+			tags: ['innovative']
+		},
 		{
 			title: 'Liqo',
 			id: LIQO_ID,
-			imgSrc: PROJECT_IMAGES[LIQO_ID]
+			imgSrc: PROJECT_IMAGES[LIQO_ID],
+			tags: ['openSource', 'usedInProduction']
 		},
 		{
 			title: 'Crownlabs',
 			id: CROWNLABS_ID,
-			imgSrc: PROJECT_IMAGES[CROWNLABS_ID]
+			imgSrc: PROJECT_IMAGES[CROWNLABS_ID],
+			tags: ['openSource', 'usedInProduction']
 		},
 		{
 			title: 'Cirullino Bot',
 			id: CIRULLINO_ID,
-			imgSrc: PROJECT_IMAGES[CIRULLINO_ID]
+			imgSrc: PROJECT_IMAGES[CIRULLINO_ID],
+			tags: ['wip']
 		},
 		{
 			title: 'Sagra del Pesto',
 			id: CNGEI_ID,
-			imgSrc: PROJECT_IMAGES[CNGEI_ID]
+			imgSrc: PROJECT_IMAGES[CNGEI_ID],
+			tags: ['wip']
 		}
 	];
 
@@ -80,7 +101,9 @@
 			</p>
 		</div>
 		<a href={`#${PROJECTS_ID}`} class="w-full">
-			<h3 class="text-primary w-full pl-4 center text-2xl sm:text-3xl uppercase">My projects</h3>
+			<h3 class="text-primary w-full pl-4 center text-2xl sm:text-3xl uppercase animate-bounce">
+				My projects
+			</h3>
 		</a>
 	</div>
 </div>
@@ -90,9 +113,10 @@
 	id={GENVISION_ID}
 	title="Genvision"
 	text={"I'm the IT manager of Genvision. Genvision is a singing talent show where teenagers compete representing their schools. I developed the necessary software to let audience vote and to allow the smooth operations of the project,"}
+	href={PROJECT_LINKS[GENVISION_ID]}
 >
 	<div class="sm:flex-1 uppercase text-center flex justify-center">
-		<a href="https://gvnetwork.it/genvision" target="_blank">
+		<a href={PROJECT_LINKS[GENVISION_ID]} target="_blank">
 			<img src={PROJECT_IMAGES[GENVISION_ID]} alt="Genvision logo" class="max-w-[250px] w-full" />
 		</a>
 	</div>
@@ -101,10 +125,11 @@
 	id={MLAT_ID}
 	title="Mi Lego Al Territorio"
 	text={'I was part of the Mi Lego AL Territorio while I was studying at Politecnico di Torino. I designed and developed the team presentation website.'}
+	href={PROJECT_LINKS[MLAT_ID]}
 >
 	<div class="sm:flex-1 uppercase text-center flex justify-center">
-		<a href="https://gvnetwork.it/genvision" target="_blank">
-			<img src={PROJECT_IMAGES[GENVISION_ID]} alt="Genvision logo" class="max-w-[250px] w-full" />
+		<a href={PROJECT_LINKS[MLAT_ID]} target="_blank">
+			<img src={PROJECT_IMAGES[MLAT_ID]} alt="Genvision logo" class="max-w-[250px] w-full" />
 		</a>
 	</div>
 </ShowcaseSection>
@@ -112,9 +137,10 @@
 	id={NEWSWORTHY_ID}
 	title="Newsworthy"
 	text={"I'm part of the Newsworthy team, we aim at building an information system that provides access to component_subscribe, objectvie and reliable news through the use of artificial intelligence"}
+	href={PROJECT_LINKS[NEWSWORTHY_ID]}
 >
 	<div class="sm:flex-1 uppercase text-center font-gv text-5xl leading-tight flex justify-center">
-		<a href="https://news-worthy.netlify.app/" target="_blank">
+		<a href={PROJECT_LINKS[NEWSWORTHY_ID]} target="_blank">
 			<img src={PROJECT_IMAGES[NEWSWORTHY_ID]} alt="Newsworthy logo" class="max-w-[200px] w-full" />
 		</a>
 	</div>
@@ -123,9 +149,10 @@
 	id={CROWNLABS_ID}
 	title="CrownLabs"
 	text={'I contributed to the first 2 years of the CrownLabs project. It allows to access desktop enviromnments deployed on a Kubernetes cluster directly from the browser. I managed the frontend development team and worked on Kubernetes operators on the backend.'}
+	href={PROJECT_LINKS[CROWNLABS_ID]}
 >
 	<div class="sm:flex-1 uppercase text-center font-gv text-5xl leading-tight flex justify-center">
-		<a href="https://crownlabs.polito.it/#" target="_blank">
+		<a href={PROJECT_LINKS[CROWNLABS_ID]} target="_blank">
 			<img src={PROJECT_IMAGES[CROWNLABS_ID]} alt="Crownlabs logo" class="max-w-[250px] w-full" />
 		</a>
 	</div>
@@ -134,9 +161,10 @@
 	id={LIQO_ID}
 	title="Liqo"
 	text={'I contributed to Liqo, an open-source project that eases Kubernetes multi-cluster topologies. I help the team with the DX of their software.'}
+	href={PROJECT_LINKS[LIQO_ID]}
 >
 	<div class="sm:flex-1 uppercase text-center font-gv text-5xl leading-tight flex justify-center">
-		<a href="https://liqo.io/" target="_blank">
+		<a href={PROJECT_LINKS[LIQO_ID]} target="_blank">
 			<img src={PROJECT_IMAGES[LIQO_ID]} alt="Liqo logo" class="max-w-[300px] w-full" />
 		</a>
 	</div>
@@ -145,9 +173,10 @@
 	id={CIRULLINO_ID}
 	title="Cirullino Bot"
 	text={'I developed a telegram bot to play my home town traditional card game Cirulla. It allows to play togheter with your friends using just telegram messaging app.'}
+	href={PROJECT_LINKS[CIRULLINO_ID]}
 >
 	<div class="sm:flex-1 uppercase text-center font-gv text-5xl leading-tight flex justify-center">
-		<a href="https://github.com/GabriFila/cirullino_js" target="_blank">
+		<a href={PROJECT_LINKS[CIRULLINO_ID]} target="_blank">
 			<img
 				src={PROJECT_IMAGES[CIRULLINO_ID]}
 				alt="Cirullino bot logo"
@@ -160,9 +189,10 @@
 	id={CNGEI_ID}
 	title="Sagra del Pesto"
 	text={"I'm a scout, to help my local scout group I developed a web application to manage orders and payments for our annual food festival around the famous Pesto sauce."}
+	href={PROJECT_LINKS[CNGEI_ID]}
 >
 	<div class="sm:flex-1 uppercase text-center font-gv text-5xl leading-tight flex justify-center">
-		<a href="https://github.com/GabriFila/app-sagra-pesto" target="_blank">
+		<a href={PROJECT_LINKS[CNGEI_ID]} target="_blank">
 			<img src={PROJECT_IMAGES[CNGEI_ID]} alt="CNGEI logo" class="max-w-[200px] w-full" />
 		</a>
 	</div>

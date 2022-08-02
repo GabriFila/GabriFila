@@ -7,12 +7,8 @@ function setPageIdx(val: number) {
 	pageIdx.set(val);
 }
 
-export const updateTotalPages = () => {
-	console.log(
-		`document.querySelectorAll('.page-card').length`,
-		document.querySelectorAll('.page-card').length
-	);
-	totalPages.set(document.querySelectorAll('.page-card').length);
+export const updateTotalPages = (fixedQt?: number) => {
+	totalPages.set(fixedQt ?? document.querySelectorAll('.page-card').length);
 };
 
 export { pageIdx, setPageIdx, totalPages };

@@ -10,9 +10,10 @@ module.exports = {
 			bgStart: '#1C1C1C',
 			bgEnd: '##262626',
 			text: '#FFFFFF',
-			primary: 'hsl(var(--primary-color-values))',
-			secondary: 'hsl(var(--secondary-color-values))'
+			primary: '#FDBA66',
+			secondary: '#FF5C61'
 		}
 	},
-	plugins: []
+	plugins: [],
+	important: true
 };

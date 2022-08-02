@@ -93,7 +93,7 @@
 	>
 		<div class="flex justify-between flex-1 w-full items-center">
 			<a href="/">
-				<h1 class="capitalize font-bold text-3xl sm:text-5xl">Gabriele Filaferro</h1>
+				<h1 class="capitalize font-bold text-3xl sm:text-5xl grad-text">Gabriele Filaferro</h1>
 				<h2 class="capitalize text-lg sm:text-2xl text-text sm:mt-1">
 					Full Stack Software Engineer
 				</h2>
@@ -144,17 +144,23 @@
 <style>
 	:root {
 		--bg-grad: linear-gradient(112.86deg, #131313 0.59%, #202020 99.62%);
-		--primary-color-values: 350, 96%, 69%;
-		--secondary-color-values: 179, 96%, 69%;
-		--primary-color: hsl(var(--primary-color-values));
-		--secondary-color: hsl(var(--secondary-color-values));
+		--primary-color-values: 33, 97%, 70%;
+		--secondary-color-values: 358, 100%, 68%;
+		--primary-wheel-color-values: 33, 97%, 70%;
+		--secondary-wheel-color-values: 358, 100%, 68%;
+		--primary-wheel-color: hsl(var(--primary-wheel-color-values));
+		--secondary-wheel-color: hsl(var(--secondary-wheel-color-values));
 	}
 
 	:global(body) {
 		background: var(--bg-grad);
 	}
-	h1 {
-		background: -webkit-linear-gradient(0deg, var(--primary-color), var(--secondary-color));
+	.grad-text {
+		background: -webkit-linear-gradient(
+			0deg,
+			var(--primary-wheel-color),
+			var(--secondary-wheel-color)
+		);
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
