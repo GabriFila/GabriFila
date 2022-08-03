@@ -7,7 +7,6 @@
 	import { pageIdx, totalPages } from '../stores/pageCursor';
 
 	const NAV_LINKS: { href: string; text: string }[] = [
-		// { text: 'projects', href: '/projects' },
 		{ text: 'tech stack', href: '/tech-stack' },
 		{ text: 'resume', href: '/resume' }
 	];
@@ -81,17 +80,18 @@
 		</nav>
 	</div>
 {/if}
-<!-- <div class="relative h-full scroll-smooth"> -->
-<div class="relative h-full snap-y snap-mandatory snap-always overflow-y-auto scroll-smooth">
+<div
+	class="relative h-full sm:snap-y sm:snap-mandatory sm:snap-always sm:overflow-y-auto scroll-smooth"
+>
 	<slot />
 </div>
 <div
-	class="fixed w-full h-full p-4 sm:p-10 flex flex-col top-0 left-0 justify-between pointer-events-none"
+	class="fixed w-full h-full sm:p-10 flex flex-col top-0 left-0 justify-between pointer-events-none"
 >
 	<div
-		class="flex flex-col sm:flex-row justify-between sm:items-start items-center mb-6 pointer-events-auto"
+		class="bg-bgStart sm:bg-[transparent] p-4 sm:p-0 flex flex-col sm:flex-row justify-between sm:items-start items-center mb-6 pointer-events-auto"
 	>
-		<div class="flex justify-between flex-1 w-full items-center">
+		<div class="flex  justify-between flex-1 w-full items-center">
 			<a href="/">
 				<h1 class="capitalize font-bold text-3xl sm:text-5xl grad-text">Gabriele Filaferro</h1>
 				<h2 class="capitalize text-lg sm:text-2xl text-text sm:mt-1">
@@ -124,19 +124,23 @@
 			</div>
 		</div>
 	{/if}
-	<div class="flex justify-between items-end pointer-events-auto">
-		<p class="text-text text-xs sm:text-xl ">
+	<div class="flex justify-between items-end pointer-events-auto p-4 sm:p-0">
+		<p class="hidden sm:block text-text text-xs sm:text-xl ">
 			<a href="https://github.com/GabriFila/GabriFila" target="_blank">
 				Built with SvelteKit
 				<i class="fa-solid fa-up-right-from-square text-text text-base ml-1" />
 			</a>
 		</p>
-		<div class="flex gap-3 ">
-			{#each ICONS_CLASSES as { classes, href }}
-				<a {href} target="_blank">
-					<i class={`${classes} text-2xl sm:text-3xl text-text grow-on-hover`} />
-				</a>
-			{/each}
+		<div class="w-full flex justify-end">
+			<div
+				class=" py-1 sm:py-0 px-2 sm:px-0 shadow-lg sm:shadow-none rounded-lg sm:rounded-none bg-bgStart sm:bg-[transparent] flex justify-end gap-3 "
+			>
+				{#each ICONS_CLASSES as { classes, href }}
+					<a {href} target="_blank">
+						<i class={`${classes} text-2xl sm:text-3xl text-text grow-on-hover`} />
+					</a>
+				{/each}
+			</div>
 		</div>
 	</div>
 </div>
@@ -154,6 +158,11 @@
 
 	:global(body) {
 		background: var(--bg-grad);
+	}
+	@media (max-width: 640px) {
+		:global(body) {
+			background: #131313;
+		}
 	}
 	.grad-text {
 		background: -webkit-linear-gradient(

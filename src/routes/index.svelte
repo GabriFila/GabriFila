@@ -101,7 +101,9 @@
 			</p>
 		</div>
 		<a href={`#${PROJECTS_ID}`} class="w-full">
-			<h3 class="text-primary w-full pl-4 center text-2xl sm:text-3xl uppercase animate-bounce">
+			<h3
+				class="text-primary w-full md:pl-4 text-center md:text-left text-2xl sm:text-3xl uppercase animate-bounce"
+			>
 				My projects
 			</h3>
 		</a>
@@ -117,7 +119,11 @@
 >
 	<div class="sm:flex-1 uppercase text-center flex justify-center">
 		<a href={PROJECT_LINKS[GENVISION_ID]} target="_blank">
-			<img src={PROJECT_IMAGES[GENVISION_ID]} alt="Genvision logo" class="max-w-[250px] w-full" />
+			<img
+				src={PROJECT_IMAGES[GENVISION_ID]}
+				alt="Genvision logo"
+				class="max-w-[100px] sm:max-w-[250px] w-full"
+			/>
 		</a>
 	</div>
 </ShowcaseSection>
@@ -129,7 +135,11 @@
 >
 	<div class="sm:flex-1 uppercase text-center flex justify-center">
 		<a href={PROJECT_LINKS[MLAT_ID]} target="_blank">
-			<img src={PROJECT_IMAGES[MLAT_ID]} alt="Genvision logo" class="max-w-[250px] w-full" />
+			<img
+				src={PROJECT_IMAGES[MLAT_ID]}
+				alt="Genvision logo"
+				class="max-w-[100px] sm:max-w-[250px] w-full"
+			/>
 		</a>
 	</div>
 </ShowcaseSection>
@@ -141,7 +151,11 @@
 >
 	<div class="sm:flex-1 uppercase text-center font-gv text-5xl leading-tight flex justify-center">
 		<a href={PROJECT_LINKS[NEWSWORTHY_ID]} target="_blank">
-			<img src={PROJECT_IMAGES[NEWSWORTHY_ID]} alt="Newsworthy logo" class="max-w-[200px] w-full" />
+			<img
+				src={PROJECT_IMAGES[NEWSWORTHY_ID]}
+				alt="Newsworthy logo"
+				class="max-w-[100px] sm:max-w-[200px] w-full"
+			/>
 		</a>
 	</div>
 </ShowcaseSection>
@@ -153,7 +167,11 @@
 >
 	<div class="sm:flex-1 uppercase text-center font-gv text-5xl leading-tight flex justify-center">
 		<a href={PROJECT_LINKS[CROWNLABS_ID]} target="_blank">
-			<img src={PROJECT_IMAGES[CROWNLABS_ID]} alt="Crownlabs logo" class="max-w-[250px] w-full" />
+			<img
+				src={PROJECT_IMAGES[CROWNLABS_ID]}
+				alt="Crownlabs logo"
+				class="max-w-[100px] sm:max-w-[250px] w-full"
+			/>
 		</a>
 	</div>
 </ShowcaseSection>
@@ -165,7 +183,11 @@
 >
 	<div class="sm:flex-1 uppercase text-center font-gv text-5xl leading-tight flex justify-center">
 		<a href={PROJECT_LINKS[LIQO_ID]} target="_blank">
-			<img src={PROJECT_IMAGES[LIQO_ID]} alt="Liqo logo" class="max-w-[300px] w-full" />
+			<img
+				src={PROJECT_IMAGES[LIQO_ID]}
+				alt="Liqo logo"
+				class="max-w-[100px] sm:max-w-[300px] w-full"
+			/>
 		</a>
 	</div>
 </ShowcaseSection>
@@ -180,7 +202,7 @@
 			<img
 				src={PROJECT_IMAGES[CIRULLINO_ID]}
 				alt="Cirullino bot logo"
-				class="max-w-[200px] w-full rounded-[50%]"
+				class="max-w-[100px] sm:max-w-[200px] w-full"
 			/>
 		</a>
 	</div>
@@ -193,7 +215,11 @@
 >
 	<div class="sm:flex-1 uppercase text-center font-gv text-5xl leading-tight flex justify-center">
 		<a href={PROJECT_LINKS[CNGEI_ID]} target="_blank">
-			<img src={PROJECT_IMAGES[CNGEI_ID]} alt="CNGEI logo" class="max-w-[200px] w-full" />
+			<img
+				src={PROJECT_IMAGES[CNGEI_ID]}
+				alt="CNGEI logo"
+				class="max-w-[100px] sm:max-w-[200px] w-full"
+			/>
 		</a>
 	</div>
 </ShowcaseSection>

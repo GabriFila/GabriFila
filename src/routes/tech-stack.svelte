@@ -84,15 +84,18 @@
 	</div>
 </MagnetSection>
 
-{#each STACKS as { name, technologies }}
+{#each STACKS as { name, technologies }, i}
 	<MagnetSection classes="md:hidden">
-		<div class="h-full w-full flex flex-col py-4 px-2">
-			<h2 class="text-primary text-center text-4xl font-semi-bold">{name}</h2>
-			<div class="flex-1 flex flex-col justify-around items-center">
+		<div
+			class="h-full w-full flex flex-col py-4 px-2"
+			style={`${i === 0 ? 'padding-top:60px !important' : ''}`}
+		>
+			<h2 class="text-primary text-center text-4xl font-semi-bold mb-4"><b>{name}</b></h2>
+			<div class="flex-1 flex flex-col justify-around items-center gap-6">
 				{#each technologies as { name: techName, imgSrc }, i}
 					<Card classes="w-full lg:w-5/6 xl:w-2/3">
 						<div class={`flex gap-6 p-6 items-center justify-center w-full`}>
-							<h4 class="text-2xl">
+							<h4 class="text-xl sm:text-2xl">
 								{techName}
 							</h4>
 							<img src={imgSrc} alt={techName} class="w-20 h-20" />

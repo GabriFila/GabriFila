@@ -12,7 +12,7 @@
 		class="flex flex-col text-center sm:text-left sm:flex-row justify-center items-center h-full sm:px-16 text-lg sm:text-xl gap-12"
 	>
 		<div class="sm:flex-1 flex flex-col gap-2">
-			<div class="flex gap-3 items-center">
+			<div class="flex gap-3 items-center justify-center sm:justify-start">
 				<h2 class="text-primary uppercase text-3xl">
 					<b>{title}</b>
 				</h2>

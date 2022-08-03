@@ -29,5 +29,5 @@ html {
 }
 
 .page-card {
-	@apply snap-start w-full h-full py-30 px-8 sm:px-10 sm:py-32 flex flex-col;
+	@apply snap-start w-full h-full py-32 px-8 sm:px-10 sm:py-32 flex flex-col;
 }

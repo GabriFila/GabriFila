@@ -7,8 +7,8 @@ module.exports = {
 			gv: ["'Gen Vision Font'", 'sans-serif']
 		},
 		colors: {
-			bgStart: '#1C1C1C',
-			bgEnd: '##262626',
+			bgStart: '#131313',
+			bgEnd: '#202020',
 			text: '#FFFFFF',
 			primary: '#FDBA66',
 			secondary: '#FF5C61'
