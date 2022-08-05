@@ -14,7 +14,7 @@
 <MagnetSection>
 	<div
 		{id}
-		class="grid grid-cols-1 md:grid-cols-3 flex-1  py-0 px-6 md:py-12 md:px-12 justify-between gap-1 md:gap-6"
+		class="grid grid-cols-1 md:grid-cols-3 flex-1 md:py-12 md:px-12 justify-between gap-1 md:gap-6 scroll-mt-28 sm:scroll-mt-0"
 	>
 		{#each items as { id: subItemId, title, imgSrc, tags }}
 			<a href={`#${subItemId}`}>
