@@ -7,7 +7,7 @@
 </script>
 
 <MagnetSection>
-	<div class="flex w-full flex-col items-center h-full justify-center gap-10 pt-24">
+	<div class="flex w-full flex-col items-center h-full justify-center gap-10">
 		<h3 class="text-center text-text text-2xl max-w-lg">
 			Excuse me, the dev responsible for this website (me) <br />didn't write his resume in HTML for
 			time constraints <span> :( </span>.

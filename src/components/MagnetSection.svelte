@@ -16,7 +16,7 @@
 
 <div
 	{id}
-	class={`p-10 sm:page-card ${classes}`}
+	class={`p-2 sm:page-card ${classes}`}
 	use:inview={{ threshold: 0.25 }}
 	on:enter={(ev) => {
 		const {} = ev;

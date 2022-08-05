@@ -71,7 +71,7 @@
 		<i
 			transition:spin={{ duration: 1200 }}
 			on:click={toggleMobileMenu}
-			class="fa-solid fa-xmark absolute text-4xl top-8 right-8 text-primary"
+			class="fa-solid fa-xmark absolute text-4xl top-8 right-8 text-secondary"
 		/>
 		<nav class="flex justify-center gap-20 flex-col items-center h-full">
 			{#each NAV_LINKS as { text, href }, i}
@@ -81,7 +81,7 @@
 	</div>
 {/if}
 <div
-	class="relative h-full sm:snap-y sm:snap-mandatory sm:snap-always sm:overflow-y-auto scroll-smooth"
+	class="relative h-full sm:snap-y sm:snap-mandatory sm:snap-always sm:overflow-y-auto scroll-smooth pt-24 sm:pt-0"
 >
 	<slot />
 </div>
@@ -91,7 +91,7 @@
 	<div
 		class="bg-bgStart sm:bg-[transparent] p-4 sm:p-0 flex flex-col sm:flex-row justify-between sm:items-start items-center mb-6 pointer-events-auto"
 	>
-		<div class="flex  justify-between flex-1 w-full items-center">
+		<div class="flex justify-between flex-1 w-full items-center">
 			<a href="/">
 				<h1 class="capitalize font-bold text-3xl sm:text-5xl grad-text">Gabriele Filaferro</h1>
 				<h2 class="capitalize text-lg sm:text-2xl text-text sm:mt-1">

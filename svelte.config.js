@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
+import { resolve } from 'path';
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -8,7 +9,14 @@ const config = {
 	preprocess: preprocess({ postcss: true }),
 	kit: {
 		adapter: adapter(),
-		prerender: { default: true }
+		prerender: { default: true },
+		vite: {
+			resolve: {
+				alias: {
+					src: resolve('./src')
+				}
+			}
+		}
 	}
 };
 

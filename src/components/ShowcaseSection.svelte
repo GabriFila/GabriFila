@@ -9,7 +9,7 @@
 <MagnetSection>
 	<div
 		{id}
-		class="flex flex-col text-center sm:text-left sm:flex-row justify-center items-center h-full sm:px-16 text-lg sm:text-xl gap-12"
+		class="flex flex-col text-center sm:text-left sm:flex-row justify-center items-center py-6 sm:py-0 h-full sm:px-16 text-lg sm:text-xl gap-12"
 	>
 		<div class="sm:flex-1 flex flex-col gap-2">
 			<div class="flex gap-3 items-center justify-center sm:justify-start">
