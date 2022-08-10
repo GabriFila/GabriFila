@@ -7,8 +7,8 @@
 
 	const id = getId();
 	let idx: undefined | number = undefined;
-	export let classes: string = '';
-
+	let classes: string = '';
+	export { classes as class };
 	onMount(() => {
 		idx = Array.from(document.querySelectorAll('.page-card')).findIndex((el) => el.id === id);
 	});

@@ -102,9 +102,9 @@
 		</div>
 		<a href={`#${PROJECTS_ID}`} class="w-full">
 			<h3
-				class="text-primary w-full md:pl-4 text-center md:text-left text-2xl sm:text-3xl uppercase animate-bounce"
+				class="text-primary w-full md:pl-4 text-center text-2xl sm:text-4xl uppercase animate-bounce"
 			>
-				My projects
+				<b> My projects</b>
 			</h3>
 		</a>
 	</div>
