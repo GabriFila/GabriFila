@@ -12,15 +12,21 @@
 	onMount(() => {
 		idx = Array.from(document.querySelectorAll('.page-card')).findIndex((el) => el.id === id);
 	});
+	let elm: HTMLDivElement;
 </script>
 
 <div
 	{id}
-	class={`page-card ${classes}`}
+	bind:this={elm}
+	class={`page-card ${classes} non-visible`}
 	use:inview={{ threshold: 0.25 }}
 	on:enter={(ev) => {
 		const {} = ev;
 		setPageIdx(idx || 0);
+		elm.classList.add('show');
+	}}
+	on:leave={() => {
+		if (window.innerWidth >= 640) elm.classList.remove('show');
 	}}
 >
 	<slot />

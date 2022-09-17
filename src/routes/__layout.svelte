@@ -27,7 +27,6 @@
 			duration,
 			css: (t: number) => {
 				const eased = cubicOut(t);
-				console.log(eased);
 				return `transform: rotate(${eased * -180}deg);`;
 			}
 		};

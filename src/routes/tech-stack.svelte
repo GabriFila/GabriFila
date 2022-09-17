@@ -47,7 +47,7 @@
 				]
 			},
 			{
-				name: 'To infinity and beyond',
+				name: "Can't wait to learn",
 				technologies: [
 					{
 						name: 'Flutter',

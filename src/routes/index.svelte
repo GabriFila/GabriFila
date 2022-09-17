@@ -95,7 +95,7 @@
 					<img class="rounded-[50%] h-full w-full" src="/me.webp" alt="Gabri's profile pic" />
 				</div>
 			</div>
-			<p class="text-center sm:text-left text-text  text-xl sm:flex-1 max-w-3xl ">
+			<p class="text-center sm:text-left text-text text-xl sm:text-2xl sm:flex-1 max-w-3xl ">
 				Hi! I love to use my knowledge and skills to create powerful and complete software. I focus
 				on web application and cloud computing, I stay up to date with the newest technology stacks
 			</p>
