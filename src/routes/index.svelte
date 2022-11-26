@@ -3,10 +3,8 @@
 	import { updateTotalPages } from '../stores/pageCursor';
 
 	import ShowcaseSection from '../components/ShowcaseSection.svelte';
-	import MagnetSection from '../components/MagnetSection.svelte';
 	import RecapSection from '../components/RecapSection.svelte';
 	import type { RecapItem } from '../types';
-	import { component_subscribe } from 'svelte/internal';
 
 	const PROJECTS_ID = 'projects';
 	const GENVISION_ID = 'genvision';
@@ -42,13 +40,13 @@
 			title: 'Genvision',
 			id: GENVISION_ID,
 			imgSrc: PROJECT_IMAGES[GENVISION_ID],
-			tags: ['usedInProduction']
+			tags: ['inProd']
 		},
 		{
 			title: 'Mi Lego Al Territorio',
 			id: MLAT_ID,
 			imgSrc: PROJECT_IMAGES[MLAT_ID],
-			tags: ['usedInProduction']
+			tags: ['inProd']
 		},
 		{
 			title: 'Newsworthy',
@@ -60,13 +58,13 @@
 			title: 'Liqo',
 			id: LIQO_ID,
 			imgSrc: PROJECT_IMAGES[LIQO_ID],
-			tags: ['openSource', 'usedInProduction']
+			tags: ['openSource', 'inProd']
 		},
 		{
 			title: 'Crownlabs',
 			id: CROWNLABS_ID,
 			imgSrc: PROJECT_IMAGES[CROWNLABS_ID],
-			tags: ['openSource', 'usedInProduction']
+			tags: ['openSource', 'inProd']
 		},
 		{
 			title: 'Cirullino Bot',

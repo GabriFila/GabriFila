@@ -3,7 +3,7 @@
 	import { fade } from 'svelte/transition';
 	export let href: string;
 	export let text: string;
-	export let delayFactor: number = 0;
+	export let delayFactor = 0;
 
 	let isActive = false;
 

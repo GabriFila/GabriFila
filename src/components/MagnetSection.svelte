@@ -7,7 +7,7 @@
 
 	const id = getId();
 	let idx: undefined | number = undefined;
-	let classes: string = '';
+	let classes = '';
 	export { classes as class };
 	onMount(() => {
 		idx = Array.from(document.querySelectorAll('.page-card')).findIndex((el) => el.id === id);
@@ -20,8 +20,7 @@
 	bind:this={elm}
 	class={`page-card ${classes} non-visible`}
 	use:inview={{ threshold: 0.25 }}
-	on:enter={(ev) => {
-		const {} = ev;
+	on:enter={() => {
 		setPageIdx(idx || 0);
 		elm.classList.add('show');
 	}}
