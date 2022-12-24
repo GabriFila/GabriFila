@@ -8,8 +8,13 @@
 
 🌐❤️☁️ - I love web apps and cloud computing
 
-Some interesting projects:
+Some interesting projects I worked on:
 
+<a href="https://github.com/GabriFila/voice-out-bot" style="margin: 5px">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=GabriFila&repo=voice-out-bot&bg_color=35,0f234a,2e54ab&title_color=fff&text_color=fff&show_owner=true" />
+</a>
+<br/>
+<br/>
 <a href="https://github.com/netgroup-polito/CrownLabs" style="margin: 5px">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=netgroup-polito&repo=CrownLabs&bg_color=35,0f234a,2e54ab&title_color=fff&text_color=fff&show_owner=true" />
 </a>
