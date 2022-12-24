@@ -11,7 +11,7 @@
 	const PROJECTS_ID = 'projects';
 	const GENVISION_ID = 'genvision';
 	const MLAT_ID = 'mlat';
-	const NEWSWORTHY_ID = 'newsworthy';
+	// const NEWSWORTHY_ID = 'newsworthy';
 	const CROWNLABS_ID = 'crownlabs';
 	const LIQO_ID = 'liqo';
 	const CIRULLINO_ID = 'cirullino';
@@ -20,7 +20,7 @@
 	const PROJECT_IMAGES: { [projectId: string]: string } = {
 		[MLAT_ID]: '/mlatLogo.webp',
 		[GENVISION_ID]: '/gvLogo.webp',
-		[NEWSWORTHY_ID]: '/worthyno.webp',
+		// [NEWSWORTHY_ID]: '/worthyno.webp',
 		[CROWNLABS_ID]: '/crownlabs.svg',
 		[LIQO_ID]: '/liqo.svg',
 		[CIRULLINO_ID]: '/cirullinoBotLogo.webp',
@@ -30,7 +30,7 @@
 	const PROJECT_LINKS: { [projectId: string]: string } = {
 		[GENVISION_ID]: 'https://gvnetwork.it/genvision',
 		[MLAT_ID]: 'https://milegoalterritorio.it',
-		[NEWSWORTHY_ID]: 'https://news-worthy.netlify.app',
+		// [NEWSWORTHY_ID]: 'https://news-worthy.netlify.app',
 		[CROWNLABS_ID]: 'https://crownlabs.polito.it/',
 		[LIQO_ID]: 'https://liqo.io/',
 		[CIRULLINO_ID]: 'https://github.com/GabriFila/cirullino_js',
@@ -50,12 +50,12 @@
 			imgSrc: PROJECT_IMAGES[MLAT_ID],
 			tags: ['usedInProduction']
 		},
-		{
-			title: 'Newsworthy',
-			id: NEWSWORTHY_ID,
-			imgSrc: PROJECT_IMAGES[NEWSWORTHY_ID],
-			tags: ['innovative']
-		},
+		// {
+		// 	title: 'Newsworthy',
+		// 	id: NEWSWORTHY_ID,
+		// 	imgSrc: PROJECT_IMAGES[NEWSWORTHY_ID],
+		// 	tags: ['innovative']
+		// },
 		{
 			title: 'Liqo',
 			id: LIQO_ID,
@@ -143,7 +143,7 @@
 		</a>
 	</div>
 </ShowcaseSection>
-<ShowcaseSection
+<!-- <ShowcaseSection
 	id={NEWSWORTHY_ID}
 	title="Newsworthy"
 	text={"I'm part of the Newsworthy team, we aim at building an information system that provides access to component_subscribe, objectvie and reliable news through the use of artificial intelligence"}
@@ -158,7 +158,7 @@
 			/>
 		</a>
 	</div>
-</ShowcaseSection>
+</ShowcaseSection> -->
 <ShowcaseSection
 	id={CROWNLABS_ID}
 	title="CrownLabs"
