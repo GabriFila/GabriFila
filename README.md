@@ -4,8 +4,6 @@
 
 🎓 - I studied Computer Engineering at [Polito](https://www.polito.it/)
 
-🎓 - I studied Computer Engineering at [Polito](https://www.polito.it/)
-
 🌐❤️☁️ - I love web apps and cloud computing
 
 Some interesting (public) projects I worked on:
