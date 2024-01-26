@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-👨‍💻 - I'm a Full Stack Software Engineer, currrently working at [Appfactory](https://appfactory.it/)
+👨‍💻 - I'm a Full Stack Software Engineer, currrently working at [Wiseair](https://wiseair.vision/)
 
 🎓 - I studied Computer Engineering at [Polito](https://www.polito.it/)
 
